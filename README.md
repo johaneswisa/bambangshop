@@ -83,4 +83,9 @@ This is the place for you to write reflections:
 
 3. Penggunaan DashMap tidak wajib dan dapat digantikan oleh implementasi Pola Singleton. Namun, DashMap sangat membantu dengan menyediakan HashMap yang aman untuk akses konkuren. Hal ini bisa dicapai dengan menggunakan Pola Singleton, tapi lebih sulit untuk membuat implementasi yang sepenuhnya aman untuk penggunaan multi-thread dan berpotensi menciptakan masalah baru dalam program.
 #### Reflection Publisher-2
+1. Dalam pola Model-View-Controller (MVC), Model mencakup penyimpanan data dan logika bisnis. Namun, pemisahan "Service" dan "Repository" dari Model diperlukan untuk memisahkan tanggung jawab dan mempromosikan prinsip isolasi dan kohesi dalam desain perangkat lunak. "Service" bertanggung jawab untuk logika aplikasi tingkat tinggi dan memfasilitasi interaksi antara Model dan Controller, sementara "Repository" bertanggung jawab untuk interaksi dengan sumber data, memungkinkan Model untuk tetap fokus pada representasi logis data. Dengan memisahkan "Service" dan "Repository" dari Model, kita dapat mencapai desain yang lebih modular, mudah diuji, dan lebih mudah dipelihara.
+
+2. Yang terjadi apabila kita hanya menggunakan Model adalah code-nya akan menjadi lebih kompleks. Code-nya tidak mengimplementasikan prinsip SRP dan SoC dan tidak adanya pemisahan service dan repository membuat setiap model memiliki coupling yang tinggi satu sama lain dan menurunkan software maintainability.
+
+3. Postman dapat membantu saya dengan menyediakan lingkungan yang terpisah untuk menguji API dan mengelola koleksi requests. Fitur yang akan berguna bagi saya adalah fitur organisasi requests dan variables API, menulis test scripts, API security testing, dll. 
 #### Reflection Publisher-3
