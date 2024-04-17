@@ -89,3 +89,20 @@ This is the place for you to write reflections:
 
 3. Postman dapat membantu saya dengan menyediakan lingkungan yang terpisah untuk menguji API dan mengelola koleksi requests. Fitur yang akan berguna bagi saya adalah fitur organisasi requests dan variables API, menulis test scripts, API security testing, dll. 
 #### Reflection Publisher-3
+1. Kita menggunakan push model yang mana publisher mem-push data ke subscribers. Push tersebut terjadi setiap suatu pembaruan (CRUD Product) terjadi. 
+
+2. Jika kita menggunakan model pull, maka subscribers hanya akan mendapatkan notification saat mereka melakukan request baru secara manual. 
+
+Advantages: 
+
+Kontrol yang lebih baik: Pelanggan memiliki kontrol penuh atas kapan dan bagaimana mereka mengambil data dari publisher.
+
+Efisiensi: Pelanggan hanya mengambil data ketika dibutuhkan, mengurangi penggunaan sumber daya.
+
+Disadvantages:
+
+Kompleksitas tambahan: Implementasi model Pull bisa menjadi lebih rumit karena pelanggan harus mengelola proses penarikan data secara aktif.
+
+Responsivitas rendah: Dalam model Pull, pelanggan harus secara teratur memeriksa publisher untuk pembaruan, yang dapat mengakibatkan keterlambatan dalam respons terhadap perubahan data.
+
+3. Jika kita memutuskan untuk tidak menggunakan multi-threading dalam proses pemberitahuan, program akan menjalankan proses pemberitahuan secara berurutan atau secara sekuensial. Hal ini berarti bahwa setiap notifikasi akan diproses satu per satu secara berturut-turut, yang dapat mengakibatkan penundaan dalam pengiriman notifikasi dan berpotensi memengaruhi kinerja aplikasi secara keseluruhan, terutama jika ada banyak notifikasi yang harus diproses dalam waktu singkat.
