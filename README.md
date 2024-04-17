@@ -77,7 +77,10 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+1. Tergantung pada skala dan kompleksitas, dalam kasus bambangshop, karena hanya ada satu class subscriber, maka satu model struct sudah cukup. 
 
+2. Karena id dan url unik, maka penggunaan DashMap menjadi penting karena kemampuannya dalam mengelola data dengan kunci identifikasi yang unik secara efisien, serta memastikan keunikan data tanpa duplikat. 
+
+3. Penggunaan DashMap tidak wajib dan dapat digantikan oleh implementasi Pola Singleton. Namun, DashMap sangat membantu dengan menyediakan HashMap yang aman untuk akses konkuren. Hal ini bisa dicapai dengan menggunakan Pola Singleton, tapi lebih sulit untuk membuat implementasi yang sepenuhnya aman untuk penggunaan multi-thread dan berpotensi menciptakan masalah baru dalam program.
 #### Reflection Publisher-2
-
 #### Reflection Publisher-3
